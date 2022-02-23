@@ -4,7 +4,7 @@ import {PokemonPaginatedResponse, Result, SimplePokemon} from '../interfaces';
 
 const usePokemonPaginated = () => {
   const abort = new AbortController();
-  const urlPage = useRef('https://pokeapi.co/api/v2/pokemon?offset=0&limit=40');
+  const urlPage = useRef('https://pokeapi.co/api/v2/pokemon?offset=0&limit=20');
 
   const [isLoading, setIsLoading] = useState(true);
   const [simplePokemonList, setSimplePokemonList] = useState<SimplePokemon[]>(
