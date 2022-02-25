@@ -13,7 +13,7 @@ import ImageColors from 'react-native-image-colors';
 
 import {SimplePokemon} from '../interfaces';
 
-import {RouteStackParams} from '../navigator/StackNavigator';
+import {RouteStackParams} from '../navigator/Tab1';
 import FadeInImage from './FadeInImage';
 
 interface Props {

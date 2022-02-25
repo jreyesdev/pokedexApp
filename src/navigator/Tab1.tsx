@@ -16,7 +16,7 @@ export type RouteStackParams = {
 
 const Stack = createStackNavigator<RouteStackParams>();
 
-function StackNavigator() {
+function Tab1Stack() {
   return (
     <Stack.Navigator
       screenOptions={{
@@ -31,4 +31,4 @@ function StackNavigator() {
   );
 }
 
-export default StackNavigator;
+export default Tab1Stack;
