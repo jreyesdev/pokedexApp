@@ -16,11 +16,10 @@ const SearchScreen = () => {
   const [pokemonFiltered, setPokemonFiltered] = useState<SimplePokemon[]>([]);
 
   useEffect(() => {
-    if (term.length === 0) {
-      return setPokemonFiltered([]);
-    }
     setPokemonFiltered(() => {
-      if (isNaN(Number(term))) {
+      if (term.length === 0) {
+        return [];
+      } else if (isNaN(Number(term))) {
         return pokemonList.filter(poke =>
           poke.name.toLowerCase().includes(term.toLowerCase()),
         );
@@ -29,6 +28,7 @@ const SearchScreen = () => {
         return pokeById ? [pokeById] : [];
       }
     });
+    return () => {};
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [term]);
 
@@ -46,7 +46,6 @@ const SearchScreen = () => {
         keyExtractor={poke => poke.id}
         ListHeaderComponent={<Text style={s.title}>{term}</Text>}
         renderItem={({item}) => <PokemonCard pokemon={item} />}
-        onEndReachedThreshold={0.4}
       />
     </View>
   );
