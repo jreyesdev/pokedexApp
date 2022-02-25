@@ -10,7 +10,7 @@ import {
 import {StackScreenProps} from '@react-navigation/stack';
 import Icon from 'react-native-vector-icons/Ionicons';
 
-import {RouteStackParams} from '../navigator/StackNavigator';
+import {RouteStackParams} from '../navigator/Tab1';
 import FadeInImage from '../components/FadeInImage';
 import usePokemon from '../hooks/usePokemon';
 import {globalStyles} from '../theme/appTheme';
